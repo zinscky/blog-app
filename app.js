@@ -31,6 +31,7 @@ mongoose.connect(process.env.DB_HOST, function(error) {
 
 // Require API route modules
 var home = require("./api_routes/home");
+var controller.articles = require("./api_routes/controller.articles");
 
 // Init App
 var app = express();
@@ -48,7 +49,12 @@ app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+// Local Routes
 app.use("/", home);
+
+// API Routes
+app.use("/api/v1/articles", controller.articles);
+
 
 var server = https.createServer(credentials, app);
 server.listen(process.env.PORT, function() {
