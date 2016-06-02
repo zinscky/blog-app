@@ -15,11 +15,13 @@ on other articles.
 ####Conventions.
 - JSON response format.
 
-    {
-      success: true/false,
-      data: payload,
-      errors: [{
-        status: status_code,
-        message: error_message
-      }]
-    }
+```javascript
+  {
+    success: true/false,
+    data: payload,
+    errors: [{
+      status: status_code,
+      message: error_message
+    }]
+  }
+```
