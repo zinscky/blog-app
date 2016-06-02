@@ -17,9 +17,9 @@ on other articles.
 
     {
       success: true/false,
-      data: result/payload,
-      errors: [{ // Array of error objects
-        status: status_code, // Generally HTTP codes
-        message: error_message,
+      data: payload,
+      errors: [{
+        status: status_code,
+        message: error_message
       }]
     }
