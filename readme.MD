@@ -10,3 +10,16 @@ on other articles.
 - I can like comments as well as articles.
 - I can create my own profile.
 - I can create my account using my email or google or github or facebook.
+
+
+####Conventions.
+- JSON response format.
+
+    {
+      success: true/false,
+      data: result/payload,
+      errors: [{ // Array of error objects
+        status: status_code, // Generally HTTP codes
+        message: error_message,
+      }]
+    }
